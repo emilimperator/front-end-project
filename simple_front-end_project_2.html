@@ -1,0 +1,338 @@
+<html>
+    <body>
+        <head>
+            <link href='https://unpkg.com/css.gg@2.0.0/icons/css/add-r.css' rel='stylesheet'>
+            <link href='https://unpkg.com/css.gg@2.0.0/icons/css/trash.css' rel='stylesheet'>
+        </head>
+        <div id="div1">
+            <h1 class="head">Testin yaradilmasi</h1>
+            <p id="p1" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px;">Testin adi:</p>
+            <input id="inp1" style="width: 400px; height: 35px; border-radius: 5px; transform: translate(68px, -10px); font-size: 15px; border: 0.6px solid black;">
+            <p id="p2" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px;">Test haqqinda melumat:</p>
+            <input id="inp2" style="width: 350px; height: 35px; border-radius: 5px; transform: translate(68px, -10px); font-size: 15px; border: 0.6px solid black;">
+            <p id="p3" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px;">Kateqoriya:</p>
+            <select id="selector" style="width: 450px; height: 35px; border-radius: 5px; transform: translate(68px, -10px); font-size: 15px; border: 0.6px solid black;">
+                <option selected></option>
+                <optgroup label="Informasiya Texnologiyalari">
+                    <option>
+
+                    </option>
+                </optgroup>
+                <optgroup label="Maliyye ve munasibatliq">
+                    <option>
+                        
+                    </option>
+                </optgroup>
+                <optgroup label="Marketinq">
+                    <option>
+                        
+                    </option>
+                </optgroup>
+            </select>
+            <p id="p4" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px;">Qeydiyyatin baslama tarixi</p>
+            <input id="inp3" style="width: 230px; height: 35px; border-radius: 5px; transform: translate(68px, -10px); font-size: 15px; border: 0.6px solid black;" type="datetime-local">
+            <p id="p5" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px; display: inline-block; transform: translate(41px, -51px);">Qeydiyyatin bitme tarixi</p>
+            <input id="inp4" style="width: 230px; height: 35px; border-radius: 5px; transform: translate(-135px, -10px); font-size: 15px; border: 0.6px solid black;" type="datetime-local">
+            <p id="p6" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px; display: inline-block; transform: translate(-171px, -51px);">Imtahanin baslama tarixi</p>
+            <input id="inp5" style="width: 230px; height: 35px; border-radius: 5px; transform: translate(-350px, -10px); font-size: 15px; border: 0.6px solid black;" type="datetime-local">
+            <p id="p6" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px; display: inline-block; transform: translate(-383px, -51px);">Imtahanin bitme tarixi</p>
+            <input id="inp6" style="width: 230px; height: 35px; border-radius: 5px; font-size: 15px; border: 0.6px solid black; transform: translate(-540px, -1px); position: absolute;" type="datetime-local">
+            <p id="p4" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 68px;">Testin qiymetlendirilmesi</p>
+            <select id="selector" style="width: 200px; height: 35px; border-radius: 5px; transform: translate(68px, -10px); font-size: 15px; border: 0.6px solid black;">
+                <option>Dogru/Yanlis</option>
+                <option>0-10 skalasi</option>
+            </select>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="artirma_div">
+
+        </div>
+        <br>
+        <br>
+        <button id="button1" onclick="elave()">Variantli sual <i class="gg-add-r" id="i1"></i></button>
+        <button id="button2" onclick="elave2()">Aciq sual <i class="gg-add-r" id="i2"></i></button>
+        <button id="button3" onclick="sil()">Hamisini sil <i class="gg-trash" id="i3"></i></button>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <button id="button4" onclick="qaralama_save()">Qaralama kimi saxla</button>
+        <br>
+        <br>
+        <button id="button5">Legv et</button>
+        <button id="button6">Tesdiq et</button>
+    <style>
+        .head{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            margin-top: 65px;
+            margin-left: 65px;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        #button1{
+            border: 0px solid black;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 180px;
+            height: 40px;
+            margin-left: 65px;
+            font-size: larger;
+            text-align: left;
+            display: inline-block;
+        }
+        #i1{
+            transform: translate(130px, -15px);
+        }
+        #button1:hover{
+            background-color: lightgray;
+            transition-duration: 0.4s;
+        }
+        #button2{
+            border: 0px solid black;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 180px;
+            height: 40px;
+            margin-left: 55px;
+            font-size: larger;
+            text-align: left;
+        }
+        #i2{
+            transform: translate(100px, -20px);
+        }
+        #button2:hover{
+            background-color: lightgray;
+            transition-duration: 0.4s;
+        }
+        #button3{
+            border: 0px solid black;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 150px;
+            height: 40px;
+            margin-left: 45px;
+            font-size: larger;
+            /* text-align: left; */
+        }
+        #button3:hover{
+            background-color: lightgray;
+            transition-duration: 0.4s;
+        }
+        #i3{
+            transform: translate(130px, -20px);
+        }
+        #button4{
+            border: 0px solid black;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 170px;
+            height: 40px;
+            margin-left: 65px;
+            font-size: 17px;
+        }
+        #button4:hover{
+            background-color: lightgray;
+            transition-duration: 0.4s;
+        }
+        #button5{
+            border: 0px solid black;
+            background-color: red;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 90px;
+            height: 40px;
+            margin-left: 65px;
+            font-size: larger;
+            color: whitesmoke;
+        }
+        #button5:hover{
+            background-color: whitesmoke;
+            color: red;
+            transition-duration: 0.4s;
+        }
+        #button6{
+            border: 0px solid black;
+            background-color: #1da1f2;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 90px;
+            height: 40px;
+            margin-left: 65px;
+            font-size: larger;
+            color: whitesmoke;
+        }
+        #button6:hover{
+            background-color: whitesmoke;
+            color: #1da1f2;
+            transition-duration: 0.4s;
+        }
+    </style>
+    <script>
+        let button1=document.getElementById('button1');
+        let button2=document.getElementById('button2');
+        let artirma_div=document.getElementById('artirma_div');
+        artirma_div.style.height='auto';
+        artirma_div.style.width='auto';
+
+        function sira_upgrade(){
+            let paraqraflar=artirma_div.querySelectorAll('p');
+            paraqraflar.forEach((paraqraf, i) => {
+                paraqraf.innerHTML='Sual '+(i+1);
+            });
+        }
+        function elave(){
+            let add_br=document.createElement('br'); // br
+
+            let add_i=document.createElement('i'); // i_1
+            add_i.className='gg-add-r';
+            add_i.style.transform='translate(30px, -30px)';
+        
+            let add_i2=document.createElement('i'); // i_2
+            add_i2.className='gg-trash';
+            add_i2.style.transform='translate(850px, -95px)';
+            add_i2.onclick=function(){
+                artirma_divalt.remove();
+                sira_upgrade();
+            };
+
+            let artirma_divalt=document.createElement('div'); // div
+            artirma_divalt.style.backgroundColor='white';
+            artirma_divalt.style.width='1100px';
+            artirma_divalt.style.marginLeft='65px';
+            artirma_divalt.style.height='auto';
+            artirma_divalt.style.webkitBorderRadius='8px';
+
+            let new_p1=document.createElement('p'); // paraqraf
+            new_p1.style.marginLeft='20px';
+            new_p1.style.marginTop='20px';
+            new_p1.style.fontFamily='Arial, sans-serif';
+
+
+            let new_input1=document.createElement('textarea'); // input
+            new_input1.cols='30';
+            new_input1.rows='10';
+            new_input1.style.marginLeft='20px';
+            new_input1.style.borderRadius='8px';
+            new_input1.placeholder='Suali daxil edin: ';
+            new_input1.style.fontSize='15px';
+            new_input1.style.fontFamily='Arial, sans-serif';
+            new_input1.style.width='800px';
+            new_input1.style.height='50px';
+            new_input1.style.border='0.1px solid black';
+
+            let new_input2=document.createElement('input'); //input radio
+            new_input2.type='radio';
+
+            let variant_artir=document.createElement('button'); // button
+            variant_artir.style.border='0px solid black';
+            variant_artir.style.backgroundColor='whitesmoke';
+            variant_artir.style.borderRadius='8px';
+            variant_artir.style.fontWeight='500';
+            variant_artir.style.width='150px';
+            variant_artir.style.height='40px';
+            variant_artir.style.fontSize='larger';
+            variant_artir.style.textAlign='right';
+            variant_artir.style.marginLeft='20px';
+            variant_artir.textContent='Variant Artir';
+            variant_artir.onmouseover=function(){
+                variant_artir.style.backgroundColor='lightgray';
+                variant_artir.style.transitionDuration='0.4s';
+            }
+            variant_artir.onmouseout=function(){
+                variant_artir.style.backgroundColor='whitesmoke';
+                variant_artir.style.transitionDuration='0.4s';
+            }
+            variant_artir.addEventListener('click', () => {
+                let teze_radio1=document.createElement('input');
+                teze_radio1.type='radio';
+                teze_radio1.style.marginLeft='20px';
+                teze_radio1.name='cavab';
+                let teze_inputradio1=document.createElement('input');
+                teze_inputradio1.style.transform='translate(10px, 0px)';
+                teze_inputradio1.style.width='300px';
+                teze_inputradio1.style.height='50px';
+                let radio_i=document.createElement('i');
+                radio_i.className='gg-trash';
+                radio_i.style.transform='translate(375px, -35px)';
+                radio_i.onclick=function(){
+                    teze_radio1.remove();
+                    teze_inputradio1.remove();
+                    radio_i.remove();
+                };
+                artirma_divalt.appendChild(teze_radio1);
+                artirma_divalt.appendChild(teze_inputradio1);
+                artirma_divalt.appendChild(radio_i);
+            });
+
+            artirma_divalt.appendChild(new_p1);
+            artirma_divalt.appendChild(new_input1);
+
+            artirma_divalt.appendChild(add_br);
+            artirma_divalt.appendChild(add_br);
+            artirma_divalt.appendChild(variant_artir);
+            artirma_divalt.appendChild(add_i);
+            artirma_divalt.appendChild(add_i2);
+
+            artirma_div.appendChild(artirma_divalt);
+
+            sira_upgrade();
+        }
+        function elave2(){
+
+            let artirma_divalt=document.createElement('div'); // div
+            artirma_divalt.style.backgroundColor='white';
+            artirma_divalt.style.width='1100px';
+            artirma_divalt.style.marginLeft='65px';
+            artirma_divalt.style.height='auto';
+            artirma_divalt.style.webkitBorderRadius='8px';
+
+            let new_p1=document.createElement('p'); // paraqraf
+            new_p1.style.marginLeft='20px';
+            new_p1.style.marginTop='20px';
+            new_p1.style.fontFamily='Arial, sans-serif';
+
+            let new_input1=document.createElement('textarea'); // input
+            new_input1.cols='30';
+            new_input1.rows='10';
+            new_input1.style.marginLeft='20px';
+            new_input1.style.borderRadius='8px';
+            new_input1.placeholder='Suali daxil edin: ';
+            new_input1.style.fontSize='15px';
+            new_input1.style.fontFamily='Arial, sans-serif';
+            new_input1.style.width='800px';
+            new_input1.style.height='50px';
+            new_input1.style.border='0.1px solid black';
+
+            let add_i2=document.createElement('i'); // i_2
+            add_i2.className='gg-trash';
+            add_i2.style.transform='translate(850px, -36px)';
+            add_i2.onclick=function(){
+                artirma_divalt.remove();
+                sira_upgrade();
+            };
+
+            artirma_divalt.appendChild(new_p1);
+            artirma_divalt.appendChild(new_input1);
+            artirma_divalt.appendChild(add_i2);
+
+            artirma_div.appendChild(artirma_divalt);
+
+            sira_upgrade();
+
+        }
+        function sil(){
+            while(artirma_div.firstChild){
+                artirma_div.firstChild.remove();
+            }
+        }
+    </script>
+    </body>
+</html>
